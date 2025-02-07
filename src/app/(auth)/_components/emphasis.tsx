@@ -1,7 +1,7 @@
 export const Emphasis = () => {
 
    return (
-      <div className="container mx-auto flex justify-center items-center flex-wrap flex-col gap-4 sm:flex-row">
+      <div className="container mx-auto my-5 flex justify-center items-center flex-wrap flex-col gap-4 sm:flex-row">
          <div className="sm:border-r-4 border-[--third-color] px-6 text-center flex-1">
             <div className="flex justify-center items-end gap-3">
                <span className="text-[--main-color] text-3xl">96%</span>

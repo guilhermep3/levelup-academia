@@ -1,14 +1,14 @@
 import Image from "next/image";
-import services1 from "../../../../public/services1.png";
-import services2 from "../../../../public/services2.png";
-import services3 from "../../../../public/services3.png";
-import services4 from "../../../../public/services4.png";
+import services1 from "../../../../public/services/services1.png";
+import services2 from "../../../../public/services/services2.png";
+import services3 from "../../../../public/services/services3.png";
+import services4 from "../../../../public/services/services4.png";
 import { IoIosArrowForward } from "react-icons/io";
 
 export const Services = () => {
 
    return (
-      <section id="services" className="pt-12 relative">
+      <section id="services" className="mt-12 mb-6 relative">
          <div className="blur-red blur-center"></div>
          <div className="container mx-auto p-2">
             <h1 className="sectionTitle text-center">Nossos <span>Serviços</span></h1>

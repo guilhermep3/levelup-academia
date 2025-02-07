@@ -35,11 +35,11 @@ body {
 .blur-orange{
   box-shadow: 0 0 1000px 50px var(--second-color);
 }
-.blur-header{
+.blur-tl{
   top: 16rem;
   left: 8rem;
 }
-.blur-header2{
+.blur-br{
   bottom: 14rem;
   right: 7rem;
 }
@@ -52,6 +52,9 @@ body {
 }
 .bgLinearOrange{
   background: linear-gradient(45deg, #422102, #0a0a0a 50%);
+}
+.bg-trainer{
+  background: radial-gradient(circle, #380202, #0a0a0a);
 }
 
 .btn, .btn-big{

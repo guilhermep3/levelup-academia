@@ -2,15 +2,14 @@ import { PlansData } from "@/data/plans"
 
 export const Plans = () => {
    const plans = PlansData;
-   console.log(plans)
 
    return (
-      <section id="plans" className="mt-12 relative">
+      <section id="plans" className="mt-12 mb-6 relative">
          <div className="blur-orange blur-center"></div>
          <div className="container mx-auto p-2">
             <h1 className="sectionTitle">Nossos <span>Planos</span></h1>
             <h2 className="sectionSubtitle">Selecione o plano que se adapta aos seus objetivos de condicionamento físico.</h2>
-            <div className="flex justify-center items-start flex-col sm:flex-row gap-5 flex-wrap">
+            <div className="flex justify-center items-center sm:items-start flex-col sm:flex-row gap-5 flex-wrap">
                {plans.map(plan => (
                   <div className={`rounded-xl p-4 w-80 text-center bg-[#0a0a0a55] border-4
                         ${plan.id % 2 === 0 ? "border-[--second-color]" : "border-[--main-color]"}

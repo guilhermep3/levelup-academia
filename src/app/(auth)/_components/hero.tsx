@@ -7,8 +7,8 @@ export const Hero = () => {
 
    return (
       <section className="pt-20 pb-5 sm:py-32 relative">
-         <div className="blur-red blur-header"></div>
-         <div className="blur-orange blur-header2"></div>
+         <div className="blur-red blur-tl"></div>
+         <div className="blur-orange blur-br"></div>
          <div className="container mx-auto p-3 flex justify-center items-center flex-col sm:flex-row h-full">
             <div className="flex-1">
                <div className="text-center mt-5 sm:mt-0">
