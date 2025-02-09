@@ -3,11 +3,12 @@ import Image from "next/image"
 import { LevelUp } from "./levelup"
 import Logo from "../../public/gym-logo.png";
 import { useEffect, useState } from "react";
+import { useIsMobile } from "@/utils/isMobile";
 
 export const Header = () => {
    const [isVisible, setIsVisible] = useState<boolean>(false);
    const [isMobileNav, setIsMobileNav] = useState<boolean>(false);
-   let isMobile = window.innerWidth < 768;
+   const isMobile = useIsMobile(768);
 
    useEffect(() => {
       const ScrollEvt = () => {
@@ -35,11 +36,11 @@ export const Header = () => {
             </div>
             <nav className="hidden sm:block w-full mx-1">
                <ul className="flex justify-center sm:gap-5 md:gap-10 text-lg z-40">
-                  <li className="linkHeader"><a href="#services"></a>Serviços</li>
-                  <li className="linkHeader"><a href="#plans"></a>Planos</li>
-                  <li className="linkHeader"><a href="#review"></a>Avaliação</li>
-                  <li className="linkHeader"><a href="#trainers"></a>Treinadores</li>
-                  <li className="linkHeader"><a href="#post"></a>Posts</li>
+                  <li className="linkHeader"><a href="#services">Serviços</a></li>
+                  <li className="linkHeader"><a href="#plans">Planos</a></li>
+                  <li className="linkHeader"><a href="#trainers">Treinadores</a></li>
+                  <li className="linkHeader"><a href="#review">Avaliação</a></li>
+                  <li className="linkHeader"><a href="#faq">FAQ</a></li>
                </ul>
             </nav>
             <div className="flex items-center gap-2">
@@ -53,11 +54,11 @@ export const Header = () => {
             </div>
             <nav className={`mobile-nav ${isMobileNav ? 'show-mobile-nav' : ''}`}>
                <ul className={`flex flex-col justify-center items-center gap-5 `}>
-                  <li className="linkHeader"><a href="#services"></a>Serviços</li>
-                  <li className="linkHeader"><a href="#plans"></a>Planos</li>
-                  <li className="linkHeader"><a href="#review"></a>Avaliação</li>
-                  <li className="linkHeader"><a href="#trainers"></a>Treinadores</li>
-                  <li className="linkHeader"><a href="#post"></a>Posts</li>
+                  <li className="linkHeader"><a href="#services">Serviços</a></li>
+                  <li className="linkHeader"><a href="#plans">Planos</a></li>
+                  <li className="linkHeader"><a href="#trainers">Treinadores</a></li>
+                  <li className="linkHeader"><a href="#review">Avaliação</a></li>
+                  <li className="linkHeader"><a href="#faq">FAQ</a></li>
                </ul>
             </nav>
          </div>

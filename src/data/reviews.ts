@@ -1,0 +1,58 @@
+import { ReviewType } from "@/types/review";
+
+export const ReviewsData: ReviewType[] = [
+   {
+      id: 1,
+      name: 'Guilherme Borges',
+      profession: 'Desenvolvedor de software',
+      title: 'Experiência transformadora',
+      body: 'Adorei a experiência na academia, os equipamentos são excelentes e o resultado realmente é impressionante.',
+      image: 'review1.png',
+      rating: 5.0,
+   },
+   {
+      id: 2,
+      name: 'Mariana Souza',
+      profession: 'Nutricionista',
+      title: 'Ambiente agradável',
+      body: 'A academia é muito bem equipada e tem um ambiente super agradável. Os professores são atenciosos e ajudam bastante.',
+      image: 'review2.png',
+      rating: 4.9,
+   },
+   {
+      id: 3,
+      name: 'Lucas Pereira',
+      profession: 'Engenheiro',
+      title: 'Ótima estrutura',
+      body: 'Gostei bastante da estrutura da academia, tudo muito moderno e organizado. Recomendo para quem busca um bom lugar para treinar.',
+      image: 'review3.png',
+      rating: 5.0,
+   },
+   {
+      id: 4,
+      name: 'Fernanda Lima',
+      profession: 'Empresária',
+      title: 'Atendimento excelente',
+      body: 'O atendimento é incrível! Desde a recepção até os treinadores, todos são muito prestativos e educados.',
+      image: 'review4.png',
+      rating: 4.9,
+   },
+   {
+      id: 5,
+      name: 'Rafael Santos',
+      profession: 'Estudante',
+      title: 'Bom custo-benefício',
+      body: 'A academia tem um ótimo custo-benefício, com planos acessíveis e uma boa variedade de equipamentos.',
+      image: 'review5.png',
+      rating: 4.9,
+   },
+   {
+      id: 6,
+      name: 'Bruno Oliveira',
+      profession: 'Médico',
+      title: 'Treinos dinâmicos',
+      body: 'Os treinos são bem dinâmicos e motivadores. As aulas em grupo são ótimas para quem gosta de treinar com companhia.',
+      image: 'review6.png',
+      rating: 5.0,
+   },
+];

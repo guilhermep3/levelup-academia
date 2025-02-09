@@ -9,6 +9,10 @@
   --third-color: #d9c40a;
 }
 
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
 body {
   color: #ffffff;
   background-color: #0a0a0a;
@@ -54,7 +58,8 @@ body {
   background: linear-gradient(45deg, #422102, #0a0a0a 50%);
 }
 .bg-trainer{
-  background: radial-gradient(circle, #380202, #0a0a0a);
+  background: radial-gradient(circle, #380202, #141414 80%);
+  transition: all 0.3s;
 }
 
 .btn, .btn-big{
@@ -126,6 +131,7 @@ body {
 .sectionTitle{
   font-size: 36px;
   text-align: center;
+  font-weight: bold;
   margin: 12px 0;
 }
 .sectionTitle span{
@@ -143,4 +149,16 @@ body {
 }
 .serviceBox:hover svg{
   transform: scale(1.10);
+}
+
+@media screen and (max-width: 768px){
+  .sectionTitle{
+    font-size: 28px;
+    margin: 10px 0;
+  }
+  .sectionSubtitle{
+    font-size: 15px;
+    margin-top: 14px;
+    margin-bottom: 36px;
+  }
 }
