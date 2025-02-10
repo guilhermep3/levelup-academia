@@ -1,7 +1,7 @@
 export const TrainersData = [
    {
       id: 1,
-      experience: 14,
+      experience: 15,
       name: 'Samuel Castro',
       role: 'Personal Trainer',
       image: 'trainer1.png'
@@ -15,14 +15,14 @@ export const TrainersData = [
    },
    {
       id: 3,
-      experience: 10,
+      experience: 11,
       name: 'Jorge Alves',
       role: 'Personal Trainer',
       image: 'trainer3.png'
    },
    {
       id: 4,
-      experience: 8,
+      experience: 10,
       name: 'Thiago Brito',
       role: 'Personal Trainer',
       image: 'trainer4.png'

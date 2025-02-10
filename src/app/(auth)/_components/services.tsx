@@ -21,7 +21,7 @@ export const Services = () => {
                      <p>Ver nossos planos</p>
                      <IoIosArrowForward size={28} className="mt-1 text-[--third-color]"/>
                   </div>
-                  <Image src={services1} alt="services1" className="absolute top-0 left-0 bottom-0 right-0 w-full h-auto object-cover opacity-90 z-[1]" />
+                  <Image src={services1} alt="services1" className="absolute left-0 bottom-0 right-0 w-full h-auto object-cover opacity-90 z-[1]" />
                </div>
                <div className="serviceBox bgLinearOrange relative w-80 h-80 rounded-xl overflow-hidden shadow-lg shadow-zinc-800 cursor-pointer hover:brightness-110 transition">
                   <div className="p-3 z-[5] max-w-44">
@@ -30,7 +30,7 @@ export const Services = () => {
                      <p>Ver nossos planos</p>
                      <IoIosArrowForward size={28} className="mt-1 text-[--third-color]"/>
                   </div>
-                  <Image src={services2} alt="services2" className="absolute top-0 left-0 bottom-0 right-0 w-full h-auto object-cover opacity-90 z-[1]" />
+                  <Image src={services2} alt="services2" className="absolute left-0 bottom-0 right-0 w-full h-auto object-cover opacity-90 z-[1]" />
                </div>
                <div className="serviceBox bgLinearRed relative w-80 h-80 rounded-xl overflow-hidden shadow-lg shadow-zinc-800 cursor-pointer hover:brightness-110 transition">
                   <div className="p-3 z-[5] max-w-44">
@@ -39,7 +39,7 @@ export const Services = () => {
                      <p>Ver nossos planos</p>
                      <IoIosArrowForward size={28} className="mt-1 text-[--third-color]"/>
                   </div>
-                  <Image src={services3} alt="services3" className="absolute top-0 left-0 bottom-0 right-0 w-full h-auto object-cover opacity-90 z-[1]" />
+                  <Image src={services3} alt="services3" className="absolute left-0 bottom-0 right-0 w-full h-auto object-cover opacity-90 z-[1]" />
                </div>
                <div className="serviceBox bgLinearOrange relative w-80 h-80 rounded-xl overflow-hidden shadow-lg shadow-zinc-800 cursor-pointer hover:brightness-110 transition">
                   <div className="p-3 z-[5] max-w-44">
@@ -48,7 +48,7 @@ export const Services = () => {
                      <p>Ver nossos planos</p>
                      <IoIosArrowForward size={28} className="mt-1 text-[--third-color]"/>
                   </div>
-                  <Image src={services4} alt="services3" className="absolute top-0 left-0 bottom-0 right-0 w-full h-auto object-cover opacity-90 z-[1]" />
+                  <Image src={services4} alt="services3" className="absolute left-0 bottom-0 right-0 w-full h-auto object-cover opacity-90 z-[1]" />
                </div>
             </div>
          </div>

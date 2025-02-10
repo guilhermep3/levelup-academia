@@ -12,7 +12,7 @@ export default function Home() {
 
    return (
       <main>
-         <Header/>
+         <Header showNav={true}/>
          <Hero/>
          <Emphasis/>
          <Services/>

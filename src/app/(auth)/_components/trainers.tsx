@@ -10,7 +10,7 @@ export const Trainers = () => {
          <div className="blur-red blur-br"></div>
          <div className="container mx-auto p-2">
             <h1 className="sectionTitle text-center">Nossos <span>Treinadores</span></h1>
-            <h2 className="sectionSubtitle"></h2>
+            <h2 className="sectionSubtitle">Os 4 treinadores mais experientes dentre os mais de 50 do nosso time</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8 py-10 place-items-center">
                {trainers.map(trainer => (
                   <div className="w-72 mb-2 hover:brightness-110 transition duration-200">

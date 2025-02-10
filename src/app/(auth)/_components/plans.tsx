@@ -11,7 +11,7 @@ export const Plans = () => {
             <h2 className="sectionSubtitle">Selecione o plano que se adapta aos seus objetivos de condicionamento físico.</h2>
             <div className="flex justify-center items-center sm:items-start flex-col sm:flex-row gap-5 flex-wrap">
                {plans.map(plan => (
-                  <div className={`rounded-xl p-4 w-80 text-center bg-[#0a0a0a55] border-4
+                  <div className={`rounded-xl p-4 w-80 text-center bg-[--black] border-4 hover:brightness-110 transition
                         ${plan.id % 2 === 0 ? "border-[--second-color]" : "border-[--main-color]"}
                      `}>
                      <h3 className="text-2xl font-semibold">{plan.title}</h3>
