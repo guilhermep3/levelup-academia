@@ -1,7 +1,34 @@
+"use client"
 import { PlansData } from "@/data/plans"
+import { useFormStore } from "@/store/formStore";
+import { useRouter } from "next/navigation";
 
 export const Plans = () => {
+   const { formData, setFormData } = useFormStore()
    const plans = PlansData;
+   const router = useRouter();
+
+   function handleChoosePlan(plan: any) {
+      let planFormated = "Plano Pro";
+      switch (plan) {
+         case 'PLANO BÁSICO':
+            planFormated = "Plano Básico";
+            break;
+         case 'PLANO PRIME':
+            planFormated = "Plano Prime";
+            break;
+         case 'PLANO PRO':
+            planFormated = "Plano Pro";
+            break;
+         default:
+            planFormated = "Plano Pro";
+            break;
+      }
+      console.log(formData)
+
+      setFormData({ signature: plan })
+      router.push('/register');
+   }
 
    return (
       <section id="plans" className="mt-12 mb-6 relative">
@@ -11,7 +38,7 @@ export const Plans = () => {
             <h2 className="sectionSubtitle">Selecione o plano que se adapta aos seus objetivos de condicionamento físico.</h2>
             <div className="flex justify-center items-center sm:items-start flex-col sm:flex-row gap-5 flex-wrap">
                {plans.map(plan => (
-                  <div className={`rounded-xl p-4 w-80 text-center bg-[--black] border-4 hover:brightness-110 transition
+                  <div key={plan.id} className={`rounded-xl p-4 w-80 text-center bg-[--black] border-4 hover:brightness-110 transition
                         ${plan.id % 2 === 0 ? "border-[--second-color]" : "border-[--main-color]"}
                      `}>
                      <h3 className="text-2xl font-semibold">{plan.title}</h3>
@@ -24,7 +51,8 @@ export const Plans = () => {
                         </ol>
                      ))}
                      <p className="text-2xl my-4">R$<span className="text-3xl">{plan.price}</span>,00</p>
-                     <button className={`text-lg py-3 w-full rounded-xl hover:brightness-110 transition
+                     <button onClick={() => handleChoosePlan(plan.title)}
+                        className={`text-lg py-3 w-full rounded-xl hover:brightness-110 transition
                         ${plan.id % 2 === 0 ? "bg-[--second-color]" : "bg-[--main-color]"}`}>Escolher este plano</button>
                   </div>
                ))}

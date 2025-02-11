@@ -36,7 +36,7 @@ export const Header = ({showNav}: props) => {
    };
 
    return (
-      <header className={`fixed w-full bg-transparent text-white py-4 px-3 z-40 transition duration-200
+      <header className={`fixed w-full bg-transparent text-white py-4 px-3 z-40 transition duration-200 top-0 left-0 right-0
          ${isVisible ? 'header-bg' : ''} ${isMobile && 'header-bg'}`}>
          <div className="container mx-auto flex justify-between items-center w-full">
             <div onClick={() => handleGoRouter("")} className="font-bold flex items-center gap-1 cursor-pointer">

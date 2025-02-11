@@ -19,8 +19,6 @@ export const Reviews = () => {
 
    useEffect(() => {
       updateMargin()
-      console.log("totalSlides: "+totalSlides)
-      console.log("slideWidth: "+slideWidth)
    }, [currentSlide])
 
    function handlePrevSlide(){
