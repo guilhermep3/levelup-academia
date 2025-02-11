@@ -20,10 +20,10 @@ export const Hero = () => {
                   <Link href={'/register'} className="btn-big">Começar minha jornada</Link>
                </div>
             </div>
-            <div className="flex-1 flex justify-center items-center relative w-full mt-10 sm:mt-0">
+            <div className="flex-1 flex justify-center items-center relative w-full pt-11 sm:pt-0 mt-7 sm:mt-0 overflow-hidden">
                <Image src={HeroImg} alt="imagem do hero" className="w-56 sm:w-72 xl:w-[360px]" />
-               <BsFillLightningChargeFill className="text-[360px] sm:text-[440px] absolute z-[-1] -mt-20 text-[--second-color]"/>
-               <div className="p-3 text-center bg-[--black] border-2 border-[--main-color] rounded-xl absolute top-0 right-6 sm:right-12 lg:right-16">
+               <BsFillLightningChargeFill className="text-[340px] sm:text-[390px] lg:text-[440px] absolute z-[-1] -mt-20 text-[--second-color]"/>
+               <div className="p-2 text-center bg-[--black] border-2 border-[--main-color] rounded-xl absolute top-0 right-6 sm:right-12 lg:right-16">
                   <span>+1300</span>
                   <p className="opacity-80 text-sm">Avaliações</p>
                </div>

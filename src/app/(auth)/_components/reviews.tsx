@@ -13,25 +13,27 @@ export const Reviews = () => {
    const totalSlides = Math.ceil(reviews.length / itemsPerPage);
 
    useEffect(() => {
-      setItemsPerPage(window.innerWidth < 1024 ? 1 : 2);
-      setSlideWidth(window.innerWidth < 1024 ? 353 : 1160)
-   }, [])
-
-   useEffect(() => {
-      updateMargin()
+      function updateSizes(){
+         setItemsPerPage(window.innerWidth < 1024 ? 1 : 2);
+         setSlideWidth(window.innerWidth < 1024 ? 353 : 1160)
+      }
+      updateSizes()
+      window.addEventListener('resize', updateSizes)
+      return () => {
+         window.removeEventListener('resize', updateSizes)
+      }
    }, [currentSlide])
 
-   function handlePrevSlide(){
-      setCurrentSlide((prev) => prev > 0 ? prev -1 : totalSlides -1);
+   useEffect(() => {
+      setNewMargin(currentSlide * slideWidth);
+   }, [currentSlide, slideWidth]);
+
+   function handlePrevSlide() {
+      setCurrentSlide((prev) => (prev > 0 ? prev - 1 : totalSlides - 1));
    }
 
-   function handleNextSlide(){
-      setCurrentSlide((prev) => prev < totalSlides -1 ? prev +1 : 0);
-   }
-
-   function updateMargin(){
-      setNewMargin(currentSlide * slideWidth)
-      console.log("newMargin: "+ newMargin)
+   function handleNextSlide() {
+      setCurrentSlide((prev) => (prev < totalSlides - 1 ? prev + 1 : 0));
    }
 
 

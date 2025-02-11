@@ -18,7 +18,6 @@ const registerSchema = z.object({
    birthday: z.string()
       .refine(value => {
          const date = new Date(value);
-         console.log(date.getTime())
          return !isNaN(date.getTime());
       }, { message: "Data inválida" })
       .refine(value => {
@@ -46,7 +45,7 @@ export const FormRegister = () => {
          birthday: "",
          genre: "Masculino",
          cpf: "",
-         signature: "Plano Pro",
+         signature: formData.signature,
          number: "",
          email: ""
       }

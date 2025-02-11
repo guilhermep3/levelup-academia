@@ -2,6 +2,7 @@
 import { PlansData } from "@/data/plans"
 import { useFormStore } from "@/store/formStore";
 import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 export const Plans = () => {
    const { formData, setFormData } = useFormStore()
@@ -24,11 +25,17 @@ export const Plans = () => {
             planFormated = "Plano Pro";
             break;
       }
-      console.log(formData)
+      handleFormatePlan(planFormated)
+   }
 
+   function handleFormatePlan(plan: any) {
       setFormData({ signature: plan })
       router.push('/register');
    }
+
+   useEffect(() => {
+      console.log(formData)
+   }, [formData])
 
    return (
       <section id="plans" className="mt-12 mb-6 relative">
@@ -45,8 +52,8 @@ export const Plans = () => {
                      <h4 className="text-[--second-color] mt-3 mb-1">Descrição</h4>
                      <p className="text-sm">{plan.description}</p>
                      <h4 className="text-[--second-color] mt-3 mb-1">Recursos</h4>
-                     {plan.features.map(feature => (
-                        <ol className="list-disc text-start px-4 leading-[1.2]">
+                     {plan.features.map((feature, index) => (
+                        <ol key={index} className="list-disc text-start px-4 leading-[1.2]">
                            <li className="mb-2">{feature}</li>
                         </ol>
                      ))}
