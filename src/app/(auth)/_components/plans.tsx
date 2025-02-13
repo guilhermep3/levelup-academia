@@ -1,8 +1,8 @@
 "use client"
 import { PlansData } from "@/data/plans"
 import { useFormStore } from "@/store/formStore";
+import { ScrollReveal } from "@/utils/scrollReveal";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
 
 export const Plans = () => {
    const { formData, setFormData } = useFormStore()
@@ -33,10 +33,6 @@ export const Plans = () => {
       router.push('/register');
    }
 
-   useEffect(() => {
-      console.log(formData)
-   }, [formData])
-
    return (
       <section id="plans" className="mt-12 mb-6 relative">
          <div className="blur-orange blur-center"></div>
@@ -44,9 +40,10 @@ export const Plans = () => {
             <h1 className="sectionTitle">Nossos <span>Planos</span></h1>
             <h2 className="sectionSubtitle">Selecione o plano que se adapta aos seus objetivos de condicionamento físico.</h2>
             <div className="flex justify-center items-center sm:items-start flex-col sm:flex-row gap-5 flex-wrap">
+
                {plans.map(plan => (
                   <div key={plan.id} className={`rounded-xl p-4 w-80 text-center bg-[--black] border-4 hover:brightness-110 transition
-                        ${plan.id % 2 === 0 ? "border-[--second-color]" : "border-[--main-color]"}
+                     ${plan.id % 2 === 0 ? "border-[--second-color]" : "border-[--main-color]"}
                      `}>
                      <h3 className="text-2xl font-semibold">{plan.title}</h3>
                      <h4 className="text-[--second-color] mt-3 mb-1">Descrição</h4>

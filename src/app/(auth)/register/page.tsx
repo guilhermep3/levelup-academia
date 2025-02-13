@@ -1,5 +1,5 @@
+import { FormRegister } from "@/components/form";
 import { Header } from "@/components/header";
-import { FormRegister } from "../_components/form";
 
 export default function RegisterPage() {
 
