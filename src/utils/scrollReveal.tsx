@@ -36,7 +36,7 @@ export const ScrollReveal = ({ children, transition, XorY, minusplus }: props) =
          style={{
             display: 'inline-block',
             opacity: isVisible ? '1' : '0',
-            transform: isVisible ? `translate${XorY ? XorY : 'x'}(0px)` : `translate${XorY ? XorY : 'x'}(${minusplus ? minusplus : '-'}200px)`,
+            transform: isVisible ? `translate${XorY ? XorY : 'x'}(0px)` : `translate${XorY ? XorY : 'x'}(${minusplus ? minusplus : '-'}100px)`,
             transition: `all ${transition ? transition : '1s'} ease-out`
          }}
       >
